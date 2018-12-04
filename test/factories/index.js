@@ -5,5 +5,5 @@ factory.setAdapter(MongooseAdapter);
 
 
 module.exports = function(){
-    
+    console.log("Pt")
 }
