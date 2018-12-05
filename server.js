@@ -11,8 +11,6 @@ if (process.env.NODE_ENV === 'test') {
   var morgan = require('morgan');
   var mongoose = require('mongoose')
   var bodyParser = require('body-parser')
-//   var routes = require('./app/routes');
-//
   
   app.use(bodyParser.json());
   
@@ -29,14 +27,7 @@ if (process.env.NODE_ENV === 'test') {
     mongoose.Promise = global.Promise;
     mongoose.connect(process.env.DATABASE, { useNewUrlParser: true });
   }
-  
-  // Application routes
-//   var handlers = {
-//     users: require('./app/handlers/usersHandler')
-//   };
-  
-//   routes.setup(app, handlers);
-  
+    
   // ---- START SERVER ----
   var server = app.listen(process.env.PORT, function(){
     if (process.env.NODE_ENV !== 'test') {
