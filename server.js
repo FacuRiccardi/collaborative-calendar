@@ -11,7 +11,7 @@ if (process.env.NODE_ENV === 'test') {
   var morgan = require('morgan');
   var mongoose = require('mongoose')
   var bodyParser = require('body-parser')
-  var routes = require('./app/routes');
+//   var routes = require('./app/routes');
   
   app.use(bodyParser.json());
   
@@ -30,11 +30,11 @@ if (process.env.NODE_ENV === 'test') {
   }
   
   // Application routes
-  var handlers = {
-    users: require('./app/handlers/usersHandler')
-  };
+//   var handlers = {
+//     users: require('./app/handlers/usersHandler')
+//   };
   
-  routes.setup(app, handlers);
+//   routes.setup(app, handlers);
   
   // ---- START SERVER ----
   var server = app.listen(process.env.PORT, function(){
